@@ -1,14 +1,15 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/feedback', function () {
-    echo "<h1>Jūs ievadījāt:</h1>";
-    echo "Jūsu vārds: $_POST[name]";
-    echo "<br><br>";
-    echo "Jūsu komentārs:  $_POST[comment]";
+Route::post('/form', function (Request $request) {
+    return view('form', [
+        'name' => $request->input('name'),
+        'comment' => $request->input('comment'),
+    ]);
 });

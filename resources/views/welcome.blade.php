@@ -8,7 +8,9 @@
 <body>
     <h1>Ievadiet informāciju</h1>
 
-    <form action="/feedback" method="POST">
+    <form action="/form" method="POST">
+        @csrf
+
         <label for="comment">Komentārs:</label>
         <input type="text-area" name="comment" value="a">
 
