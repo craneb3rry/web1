@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Jūs ievadījāt:</h1>
+    <p>s</p>
 
     <p><strong>Vārds:</strong> {{ $name }}</p>
     <p><strong>Komentārs:</strong> {{ $comment }}</p>
